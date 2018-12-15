@@ -1,0 +1,23 @@
+{
+  "name": "hymn",
+  "version": "1.0.0",
+  "description": "Display Hymn",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "pm2-runtime start .pm2.config.js"
+  },
+  "repository": "https://github.com/grace0927/hymn.git",
+  "author": "Jianyu Feng <cellphone2008@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "pm2": "^3.2.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-markdown": "^4.0.4"
+  },
+  "devDependencies": {}
+}

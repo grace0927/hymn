@@ -1,0 +1,13 @@
+version: '3'
+services:
+  hymn:
+    build: .
+    container_name: hymn
+    image: hymn
+    ports:
+      - "80:80"
+    volumes:
+      - ${PWD}:/var/www
+    environment:
+      PORT: 80
+      VIRTUAL_HOST: hymn.docker
