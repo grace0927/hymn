@@ -1,5 +1,8 @@
 const express = require('express')
+const fs = require('fs')
 const next = require('next')
+
+const routes = require('../routes')
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -8,13 +11,9 @@ const handle = app.getRequestHandler()
 app.prepare()
 .then(() => {
   const server = express()
-  const PORT = process.env.PORT || 80
+  const PORT = process.env.PORT || 3000
 
-  server.get('/p/:id', (req, res) => {
-    const actualPage = '/post'
-    const queryParams = { id: req.params.id }
-    app.render(req, res, actualPage, queryParams)
-  })
+  server.use('/books', routes.books)
 
   server.get('*', (req, res) => {
     return handle(req, res)
