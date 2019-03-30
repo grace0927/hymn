@@ -17,4 +17,10 @@ module.exports = {
     'ch': '颂赞诗选',
     'list': 'red',
   },
+  'others': {
+    'id': 3,
+    'name': 'Other',
+    'ch': '其他',
+    'list': 'others',
+  },
 }
